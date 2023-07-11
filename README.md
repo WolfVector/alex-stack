@@ -9,5 +9,5 @@ This repo serves as a full-stack template, using the next technologies:
 
 ## Install
 
-`git clone repo-name folder-name`
+`git clone https://github.com/WolfVector/alex-stack.git folder-name`
 
