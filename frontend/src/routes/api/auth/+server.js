@@ -10,7 +10,7 @@ export async function GET(event) {
     console.log("siii")
     headers.append('Cookie', `connect.sid=${cookie}`);
   }
-  let res = await fetch(`http://localhost:3000/get-user`,{
+  let res = await fetch(`http://localhost:3000/auth/get-user`,{
       method: "GET",
       headers
   });

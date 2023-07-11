@@ -46,8 +46,8 @@ router.get('/oauth2/redirect/google', passport.authenticate('google', {
   failureRedirect: 'http://localhost:5173/login'
 }));
 
-router.get('/auth/github', passport.authenticate('github', { scope: [ 'user:email' ] }));
-router.get('/auth/github/callback', passport.authenticate('github', { 
+router.get('/login/github', passport.authenticate('github', { scope: [ 'user:email' ] }));
+router.get('/github/callback', passport.authenticate('github', { 
     successRedirect: 'http://localhost:5173',
     failureRedirect: 'http://localhost:5173/login'
 }));
