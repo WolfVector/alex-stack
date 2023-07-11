@@ -10,7 +10,7 @@ var router = express.Router();
 passport.use(new GoogleStrategy({
   clientID: process.env.GOOGLE_CLIENT_ID,
   clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-  callbackURL: '/oauth2/redirect/google',
+  callbackURL: '/api/auth/oauth2/redirect/google',
   scope: [ 'profile' ]
 }, function verify(issuer, profile, cb) {
   return cb(null, profile);
@@ -19,7 +19,7 @@ passport.use(new GoogleStrategy({
 passport.use(new GitHubStrategy({
     clientID: process.env.GITHUB_CLIENT_ID,
     clientSecret: process.env.GITHUB_CLIENT_SECRET,
-    callbackURL: "/auth/github/callback"
+    callbackURL: "/api/auth/callback/github"
   },
   function verify(accessToken, refreshToken, profile, cb) {
     return cb(null, profile)
@@ -47,7 +47,7 @@ router.get('/oauth2/redirect/google', passport.authenticate('google', {
 }));
 
 router.get('/login/github', passport.authenticate('github', { scope: [ 'user:email' ] }));
-router.get('/github/callback', passport.authenticate('github', { 
+router.get('/callback/github', passport.authenticate('github', { 
     successRedirect: 'http://localhost:5173',
     failureRedirect: 'http://localhost:5173/login'
 }));

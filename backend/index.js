@@ -47,6 +47,6 @@ app.use(cors({
 
 const authrouter = require("./routes/auth")
 
-app.use('/auth', authrouter)
+app.use('/api/auth', authrouter)
 
 app.listen(process.env.PORT || 3000)
