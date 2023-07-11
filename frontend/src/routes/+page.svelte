@@ -18,10 +18,10 @@
 </script>
 
 
-<a class="button google" href="http://localhost:3000/api/auth/login/federated/google">Sign in with Google</a>
-<a class="button google" href="http://localhost:3000/api/auth/login/github">Sign in with Github</a>
-<button on:click={makeReq}>Make req</button>
+<a class="bg-slate-300 p-2 rounded-md" href="http://localhost:3000/api/auth/login/federated/google">Sign in with Google</a>
+<a class="bg-slate-300 p-2 rounded-md" href="http://localhost:3000/api/auth/login/github">Sign in with Github</a>
+<button class="bg-slate-300 p-2 rounded-md" on:click={makeReq}>Make req</button>
 <form action="http://localhost:3000/api/auth/logout" method="post">
-  <button class="logout" type="submit">Sign out</button>
+  <button class="bg-slate-300 p-2 rounded-md mt-2" type="submit">Sign out</button>
 </form>
-<button on:click={makeServerReq}>Cookie</button>
+<button class="bg-slate-300 p-2 rounded-md mt-2" on:click={makeServerReq}>Cookie</button>
