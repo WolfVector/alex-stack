@@ -9,11 +9,11 @@
     <div class="mt-10 lg:mt-16 flex flex-col items-center">
       <button class="p-3 border w-3/4 flex justify-center gap-x-3"> 
         <img src={google} width="25" height="25" alt="Google icon" /> 
-        Sign in with Google
+        <a href="http://localhost:3000/api/auth/login/federated/google">Sign in with Google</a>
       </button>
       <button class="p-3 border w-3/4 mt-4 flex justify-center gap-x-3">
         <img src={github} width="25" height="25" alt="Github icon" />
-        Sign in with Github
+        <a href="http://localhost:3000/api/auth/login/github">Sign in with Github</a>
       </button>
     </div>
   </div>
