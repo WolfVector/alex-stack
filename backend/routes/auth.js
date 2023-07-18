@@ -55,7 +55,7 @@ router.get('/callback/github', passport.authenticate('github', {
 router.get('/get-user', function(req, res) {
   console.log(req.user)
 
-  res.json({ ok: true })
+  res.json({ ok: true, user: req.user })
 })
 
 router.post('/logout', function(req, res, next) {

@@ -49,4 +49,4 @@ const authrouter = require("./routes/auth")
 
 app.use('/api/auth', authrouter)
 
-app.listen(process.env.PORT || 3000)
+app.listen(process.env.PORT || 3000, "0.0.0.0")
